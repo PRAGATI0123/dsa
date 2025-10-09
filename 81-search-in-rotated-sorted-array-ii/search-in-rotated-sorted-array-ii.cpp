@@ -11,11 +11,10 @@ public:
             if (target == nums[mid]){
                 return true ;
             }
-            if(nums[mid] == nums[low]){
-                low ++ ;
+            if(nums[mid] == nums[high]){
+                high -- ;
                 continue;
             }
-
             if( nums[low] <= nums[mid]){
                 if(nums[low] <= target && target < nums[mid]){
                     high = mid - 1;
